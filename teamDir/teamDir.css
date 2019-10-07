@@ -1,0 +1,15 @@
+
+h1 {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1.2em;
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    color: aliceblue;
+}
+
+header{
+    height: 50px;
+    background-color: #2d89e6;
+}
