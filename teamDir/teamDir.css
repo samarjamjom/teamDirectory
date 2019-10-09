@@ -29,15 +29,14 @@ h1 {
     margin-top: 30px;
     width: 250px;
     height: 470px; 
-
 }
 
-form {
+.add-members form {
     height: 470px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 40px;
+   
     }
 
 h2 {
@@ -45,30 +44,39 @@ h2 {
     margin-top: 0px;
 }
 
-input {
+form input[type="text"] {
     width: 100%;
     border: 2px solid #e5e5e5; 
-    padding: 10px;
     margin: 5px;
-    
-    
-    
+    padding: 10px;
 }
 
 textarea {
+    resize: none;
     width: 100%;
     min-width: 150px;
     max-width: 500px;
-    max-height: 200px;
+    height: 180px;
     border: 2px solid #e5e5e5; 
     margin: 5px;
     padding: 10px;
 }
+
 select {
     width: 100%;
     border: 2px solid #e5e5e5;
     margin: 5px;
     padding: 10px;
+}
+
+input[type="button"] {
+    width: 100%;
+    border-radius: 25px 25px 0 0;
+    border: 2px solid #e5e5e5;
+    margin-top: 5px;
+    margin-right: 9px;
+    margin-left: 0px;
+    padding: 12px;
 }
 
 /*
