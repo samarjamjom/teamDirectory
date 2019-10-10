@@ -1,5 +1,7 @@
 .main {
-    display: fixed;
+    margin: 0; 
+    height: 100%; 
+    overflow: hidden;
 }
 
 header{
@@ -17,25 +19,22 @@ h1 {
     color: aliceblue;
 }
 
-.Main-contain {
-
-}
-
 .add-members {
     border-radius: 25px;
     border: 2px solid #e5e5e5;
-    padding: 40px;
     margin-left: 60px;
     margin-top: 30px;
-    width: 250px;
-    height: 470px; 
+    width: 300px;
+    height: 500px; 
+    float: left;
+    padding: 20px 10px 0px 10px;
 }
 
-.add-members form {
-    height: 470px;
+.add-members form { 
+    height: 496px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; 
    
     }
 
@@ -45,7 +44,7 @@ h2 {
 }
 
 form input[type="text"] {
-    width: 100%;
+    width: 280px;
     border: 2px solid #e5e5e5; 
     margin: 5px;
     padding: 10px;
@@ -53,7 +52,7 @@ form input[type="text"] {
 
 textarea {
     resize: none;
-    width: 100%;
+    width: 280px;
     min-width: 150px;
     max-width: 500px;
     height: 180px;
@@ -63,26 +62,29 @@ textarea {
 }
 
 select {
-    width: 100%;
+    width: 280px;
     border: 2px solid #e5e5e5;
     margin: 5px;
     padding: 10px;
 }
 
 input[type="button"] {
-    width: 100%;
-    border-radius: 25px 25px 0 0;
+    width: 320px;
+    border-radius: 0px 0px 25px 25px;
     border: 2px solid #e5e5e5;
-    margin-top: 5px;
-    margin-right: 9px;
-    margin-left: 0px;
-    padding: 12px;
+    height: 35px;
+    margin-bottom: 0px;
 }
 
 /*
 .add-form {
     display: flex;
     background-color: royalblue;
+    margin-top: 5px;
+    margin-right: 9px;
+    margin-left: 0px;
+    padding: 12px;
+    
 }
 
 .add-form input {
