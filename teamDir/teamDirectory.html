@@ -16,24 +16,32 @@
 
             <div>
                 <div class= "add-members">
+
                     <form>
                        <h2>Add new members<h2>
                        <input type="text" placeholder="name">
                        <input type="text" placeholder="Email">
 
                        <select name="major" id="major" >
-                        <option value="engineering"></option>
-                        <option value="cs"></option>
+                        <option value="engineering" selected>engineering</option>
+                        <option value="cs">cs</option>
                        </select>
 
                        <select name="role" >
-                        <option value="Front-End Developer"></option>
-                        <option value="Back-End Developer"></option>
+                        <option value="Front-End Developer" selected>Front-End Developer</option>
+                        <option value="Back-End Developer">Back-End Developer</option>
                        </select>
 
                        <textarea placeholder="Biography"></textarea>
-                       <input type="button" onClick="save();" value="Save">
                     </form>
+            
+                    <div class="checkboxD">
+                        <label><input type="checkbox" /> add to bottom /or at index<input type="text" placeholder=""></label>
+                    </div>
+
+                    <div>
+                        <input type="button" onClick="save();" value="Save">
+                    </div>
                 </div>
 
                 <div class= "list">
