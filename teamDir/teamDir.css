@@ -71,6 +71,7 @@ label {
     display: block;
     padding-left: 15px;
     text-indent: -15px;
+    white-space: nowrap;
 }
 
 .checkboxD {
@@ -103,4 +104,64 @@ input[type="button"] {
     background-color: #2d89e6;
 }
 
+.list {
+    height: 580px;
+    width: 880px;
+    margin-left: 400px; 
+    margin-top: 0px;
+    background-color: #e5e5e5;
+}
 
+.list-header {
+    height: 30px;
+}
+
+.filter-bar {
+    background-color: #2d89e6;
+    height: 30px; 
+    width: 700px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+.filter-bar label {
+    display: inline-block;
+    font-size: 1px;
+    font-family: cursive;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.filter-bar label { 
+    display: inline-block;
+    margin-left: 70px;
+    font-size: 15px;
+    color: white; 
+}
+
+#sortby {
+    width: 70px;
+    height: 20px;
+    position: relative;
+    vertical-align: middle;
+    margin-top: 0px;
+    margin-bottom: 18px;
+    font-size: 1px;
+}
+
+#major-filter, #role-filter {
+    width: 100px;
+    height: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+div.vertical-line{
+    width: 1px; /* Line width */
+    background-color: #e5e5e5; /* Line color */
+    height: 100%; /* Override in-line if you want specific height. */
+    display: inline-flex;
+    
+  }
