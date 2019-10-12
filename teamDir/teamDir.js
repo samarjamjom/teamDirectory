@@ -24,6 +24,7 @@ function get() {
 */
 
 const ul = document.querySelector('ul');
+const list = document.getElementById("list-members");
 let teamDir = localStorage.getItem('teamList') ? JSON.parse(localStorage.getItem('teamList')) : [];
 //console.log(teamDir);
 
@@ -32,11 +33,20 @@ const data = JSON.parse(localStorage.getItem('teamList'));
 //console.log(data);
 
 const liMaker = text => {
+    /*
     const li = document.createElement('li');
-    
-    li.textContent = text.name  + "\n" +text.email + 
-    console.log( li.textContent);
+    li.textContent = text; 
     ul.appendChild(li);
+    */
+
+    const t = `<li class=" LIST_"> 
+    <h4> ${text.name} </h4>
+    <p> ${text.email} </p>
+    </li>`
+
+    const position = "beforeend";
+    list.insertAdjacentHTML(position, t);
+
   }
 
 
