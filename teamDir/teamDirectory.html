@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <title>"Preview : PSEU-team-members"</title> 
-        <link rel = "stylesheet" type = "text/css" href = "teamDir.css" />
+        <link rel = "stylesheet" type = "text/css" href = "teamDir.css" />   
     </head>
 
     <body>
@@ -19,20 +19,20 @@
 
                     <form>
                        <h2>Add new members<h2>
-                       <input type="text" placeholder="name">
-                       <input type="text" placeholder="Email">
+                       <input type="text" placeholder="name" id="name" >
+                       <input type="text" placeholder="Email" id="email">
 
                        <select name="major" id="major" >
                         <option value="engineering" selected>engineering</option>
                         <option value="cs">cs</option>
                        </select>
 
-                       <select name="role" >
+                       <select name="role" id="role" >
                         <option value="Front-End Developer" selected>Front-End Developer</option>
                         <option value="Back-End Developer">Back-End Developer</option>
                        </select>
 
-                       <textarea placeholder="Biography"></textarea>
+                       <textarea placeholder="Biography" id="bio"  required minlength="4" maxlength="8" size="10"></textarea>></textarea>
                     </form>
             
                     <div class="checkboxD">
@@ -40,7 +40,7 @@
                     </div>
 
                     <div>
-                        <input type="button" onClick="save();" value="Save">
+                        <input type="button" onclick="myFunction()" value="Save" id="save">
                     </div>
                 </div>
 
@@ -69,14 +69,13 @@
                         <div class="vertical-line"></div>
                     </div>
 
-                    <div class="list-items">
+                    <div class="list-items" id="list-members">
 
                     </div>
                 </div>
             </div>
         
         </div>
+        <script src="teamDir.js"></script>
      </body>   
-  
-
 </html>
