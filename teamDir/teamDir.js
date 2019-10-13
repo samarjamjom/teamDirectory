@@ -39,14 +39,29 @@ const liMaker = text => {
     ul.appendChild(li);
     */
 
+    /*
+
     const t = `<li class=" LIST_"> 
     <h4> ${text.name} </h4>
     <p> ${text.email} </p>
     </li>`
+    */
+ 
+    const t = `<div class="LIST">
+    <div class="List_name"> ${text.name} </div>
+    <div class="List_email"> 
+    <span> ${text.email} </span>
+    <span> ${'/'} </span> 
+    <span> ${text.major} </span> 
+    <span> ${'/'} </span> 
+    <span> ${text.role} </span>
+    </div>
+    <div class="List_bio"> ${text.Bio} </div>
+    </div>
+    `
 
     const position = "beforeend";
     list.insertAdjacentHTML(position, t);
-
   }
 
 
