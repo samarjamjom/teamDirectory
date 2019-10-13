@@ -49,7 +49,14 @@ form input[type="text"] {
     padding: 10px;
 }
 
-select {
+#role {
+    width: 302px;
+    border: 2px solid #e5e5e5;
+    margin: 5px;
+    padding: 10px;
+}
+
+#major {
     width: 302px;
     border: 2px solid #e5e5e5;
     margin: 5px;
@@ -119,10 +126,10 @@ input[type="button"] {
 
 .filter-bar {
     background-color: #2d89e6;
-    height: 30px; 
+    height: 15px; 
     width: 700px;
-    padding-bottom: 5px;
-    padding-top: 5px;
+    padding-bottom: 15px;
+    padding-top: 10px;
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
 }
@@ -131,38 +138,30 @@ input[type="button"] {
     display: inline-block;
     font-size: 1px;
     font-family: cursive;
-    margin-top: 0px;
-    margin-bottom: 0px;
-}
-
-.filter-bar label { 
-    display: inline-block;
     margin-left: 70px;
-    font-size: 15px;
-    color: white; 
 }
 
 #sortby {
-    width: 70px;
+    width: 50px;
     height: 20px;
     position: relative;
-    vertical-align: middle;
-    margin-top: 0px;
-    margin-bottom: 18px;
+    padding: 1px;
+    font-size: 5px;
 }
 
 #major-filter, #role-filter {
     width: 100px;
     height: 20px;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    padding: 1px;
+    font-size: 5px;
 }
 
 div.vertical-line{
     width: 1px; /* Line width */
     background-color: #e5e5e5; /* Line color */
-    height: 100%; /* Override in-line if you want specific height. */
+    height:100%; /* Override in-line if you want specific height. */
     display: inline-flex;
+    
     
 }
 

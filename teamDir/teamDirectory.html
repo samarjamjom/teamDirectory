@@ -19,24 +19,24 @@
 
                     <form>
                        <h2>Add new members<h2>
-                       <input type="text" placeholder="name" id="nam" >
-                       <input type="text" placeholder="Email" id="email">
+                       <input type="text" placeholder="name" id="nam" required >
+                       <input type="text" placeholder="Email" id="email" required> 
 
-                       <select name="major" id="major" >
+                       <select name="major" id="major" required >
                         <option value="engineering" selected>engineering</option>
                         <option value="cs">cs</option>
                        </select>
 
-                       <select name="role" id="role" >
+                       <select name="role" id="role" required>
                         <option value="Front-End Developer" selected>Front-End Developer</option>
                         <option value="Back-End Developer">Back-End Developer</option>
                        </select>
 
-                       <textarea placeholder="Biography" id="bio"  required minlength="4" maxlength="8" size="10"></textarea>></textarea>
+                       <textarea placeholder="Biography" id="bio" required minlength="500" maxlength="1500" size="10"></textarea></textarea>
                     </form>
             
                     <div class="checkboxD">
-                        <label><input type="checkbox" /> add to bottom /or at index<input type="text" placeholder=""></label>
+                        <label><input type="checkbox" id="Check"> add to bottom /or at index<input type="text" placeholder="" id="index"></label>
                     </div>
 
                     <div>
@@ -48,25 +48,31 @@
                     <div class="list-header"></div>
 
                     <div class="filter-bar">
-                        <label >SORT BY </label>
-                            <select id="sortby" >
-                                <option value="A-Z" selected>A-Z</option>
+                        <span><label >SORT BY </label></span>
+                        <span>
+                            <select name="sort" id="sortby">
+                                <option value="A-Z" >A-Z</option>
                                 <option value="Z-A">Z-A</option>
-                                <option value="newest">newest</option>
+                                <option value="newest" selected>newest</option>
                                 <option value="oldest">oldest</option>
                             </select>
-                       
-                        <div class="vertical-line"></div>
-                       <select id="major-filter" >
-                            <option value="engineering" selected>engineering</option>
-                            <option value="cs">cs</option> 
-                        </select> 
-
-                        <select id="role-filter" > 
-                            <option value="Front-End Developer" selected>Front-End Developer</option>
-                            <option value="Back-End Developer">Back-End Developer</option> 
-                        </select>
-                        <div class="vertical-line"></div>
+                        </span>
+                        <span><div class="vertical-line"></div></span>
+                        <span>
+                            <select id="major-filter" >
+                                <option value="engineering" selected>engineering</option>
+                                <option value="cs">cs</option> 
+                            </select> 
+                        </span>
+                        <span>
+                            <select id="role-filter" > 
+                                <option value="Front-End Developer" selected>Front-End Developer</option>
+                                <option value="Back-End Developer">Back-End Developer</option> 
+                            </select>
+                        </span>
+                        <span>
+                            <div class="vertical-line"></div>
+                        </span>
                     </div>
 
                     <div class="list-items" id="list-members">
