@@ -114,11 +114,35 @@ majorFilter.addEventListener("change",function(){
         for(let i=0 ; i < teamDir.length ; i++){
             if(teamDir[i].major == "engineering"){
                 liMaker2(teamDir[i]);
-            }
-            
+            } 
         }
     }
     else{
+        for(let i=0 ; i < teamDir.length ; i++){
+            if(teamDir[i].major == "cs"){
+                liMaker2(teamDir[i]);
+            } 
+        }
+    }
+});
 
+var roleFilter = document.getElementById("role-filter");
+roleFilter.addEventListener("change",function(){
+    document.getElementById("list-members").innerHTML = "";
+    let option = roleFilter.value;
+ 
+    if(option === "Front-End Developer"){
+        for(let i=0 ; i < teamDir.length ; i++){
+            if(teamDir[i].role == "Front-End Developer"){
+                liMaker2(teamDir[i]);
+            } 
+        }
+    }
+    else{
+        for(let i=0 ; i < teamDir.length ; i++){
+            if(teamDir[i].role == "Back-End Developer"){
+                liMaker2(teamDir[i]);
+            } 
+        }
     }
 });
