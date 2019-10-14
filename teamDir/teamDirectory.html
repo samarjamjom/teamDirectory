@@ -42,7 +42,7 @@
                     </div>
 
                     <div>
-                        <input type="button" onclick="myFunction()" value="Save" id="save">
+                        <input type="button" onclick="saveFunction()" value="Save" class="saveButton">
                     </div>
                 </div>
 
@@ -52,7 +52,7 @@
                     <div class="filter-bar">
                         <span><label >SORT BY </label></span>
                         <span>
-                            <select name="sort" id="sortby">
+                            <select name="sort" id="sortby" onchange="sortFunction()">
                                 <option value="A-Z" >A-Z</option>
                                 <option value="Z-A">Z-A</option>
                                 <option value="newest" selected>newest</option>
@@ -74,6 +74,9 @@
                         </span>
                         <span>
                             <div class="vertical-line"></div>
+                        </span>
+                        <span>
+                            <input type="text" placeholder="search by name" id="search_name" >
                         </span>
                     </div>
 
