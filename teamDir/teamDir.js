@@ -1,5 +1,3 @@
-
-
 const list = document.getElementById("list-members");
 let teamDir = localStorage.getItem('teamList') ? JSON.parse(localStorage.getItem('teamList')) : [];
 
@@ -26,6 +24,7 @@ data.forEach(item => {
     liMaker(item)
   })
 
+
 function myFunction() { 
     let teamMember = {
         name : document.getElementById("nam").value,
@@ -35,11 +34,29 @@ function myFunction() {
         Bio : document.getElementById("bio").value
     };
 
-    if(teamMember.name == "" || teamMember.email == "" || teamMember.major =="" || teamMember.role == "" || teamMember.Bio == ""){
+    let EmailChecked = 1;
+    let FiledChecked = 1;
+    let BioChecked = 1;
+
+    for(let i= 0; i< teamDir.length; i++){
+        if(teamDir[i].email == teamMember.email)
+        EmailChecked = 0;
+    }
+
+    if(teamMember.name == "" || teamMember.email == "" || teamMember.major =="major" || teamMember.role == "role" || teamMember.Bio == ""){
+        FiledChecked = 0;
         alert("Please fill all field");
     }
 
-    else {
+    if(teamMember.Bio.length < 2 || teamMember.Bio.length > 6){
+        BioChecked = 0;
+        alert("Please Biography field is a textarea with 500 character min and 1500 character max. ");
+    }
+
+    if(EmailChecked == 0){
+        alert("This Email has been used, Please use another one");
+    }
+    else if (EmailChecked == 1 && FiledChecked == 1 && BioChecked == 1) {
         teamDir.push(teamMember);
         fun(teamMember);
     }
@@ -78,9 +95,9 @@ function fun(text){
          
 }
 
-
 var sortItem = document.getElementById("sortby");
-sortItem.addEventListener("change",function(){
+
+sortItem.addEventListener("onclick",function(){
     let option = sortItem.value;
     if(option === "A-Z"){
         teamDir.sort((a, b) => (a.name > b.name) ? 1 : -1);
