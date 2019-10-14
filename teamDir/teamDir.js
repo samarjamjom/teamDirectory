@@ -1,14 +1,12 @@
 
+
 const list = document.getElementById("list-members");
 let teamDir = localStorage.getItem('teamList') ? JSON.parse(localStorage.getItem('teamList')) : [];
-let counter = 0;
 
 localStorage.setItem('teamList', JSON.stringify(teamDir));
 const data = JSON.parse(localStorage.getItem('teamList'));
-//console.log(data);
 
 const liMaker = text => {
-
     const t = `<div class="LIST">
     <div class="List_name"> ${text.name} </div>
     <div class="List_email"> 
@@ -21,15 +19,12 @@ const liMaker = text => {
     <div class="List_bio"> ${text.Bio} </div>
     </div>
     `
-        const position = "beforeend"; 
-    if(document.getElementById("Check").checked){
-        position = "beforeend";
-    }
-
-    list.insertAdjacentHTML(position, t);
-    //at specific position..    
+    list.insertAdjacentHTML("beforeend",t); 
 }
 
+data.forEach(item => {
+    liMaker(item)
+  })
 
 function myFunction() { 
     let teamMember = {
@@ -40,33 +35,49 @@ function myFunction() {
         Bio : document.getElementById("bio").value
     };
 
-    /*
-    for(var i = 0; i < data.length; i++) {
-        if(data[i].email == text.email){
-            alert("This Email was been used");
-        }
+    if(teamMember.name == "" || teamMember.email == "" || teamMember.major =="" || teamMember.role == "" || teamMember.Bio == ""){
+        alert("Please fill all field");
     }
-*/
- 
-    teamDir.push(teamMember);
-    localStorage.setItem('teamList', JSON.stringify(teamDir));
-   
-    teamDir1.push(teamMember);
-    localStorage.setItem('teamList1', JSON.stringify(teamDir1));
 
-    teamDir2.unshift(teamMember);
-    localStorage.setItem('teamList2', JSON.stringify(teamDir2));
+    else {
+        teamDir.push(teamMember);
+        fun(teamMember);
+    }
 
     nam.value = '';
     email.value = '';
     bio.value = '';
-    counter = counter + 1;
 
 } 
 
-data.forEach(item => {
-    liMaker(item)
-  })
+function fun(text){
+    localStorage.setItem('teamList', JSON.stringify(teamDir));
+    
+    const t = `<div class="LIST">
+    <div class="List_name"> ${text.name} </div>
+    <div class="List_email"> 
+    <span> ${text.email} </span>
+    <span> ${'/'} </span> 
+    <span> ${text.major} </span> 
+    <span> ${'/'} </span> 
+    <span> ${text.role} </span>
+    </div>
+    <div class="List_bio"> ${text.Bio} </div>
+    </div>
+    `
+
+    if(document.getElementById("Check").checked){
+        list.insertAdjacentHTML("beforeend", t);
+    }
+    
+    else{
+    const position = "afterbegin";
+    list.insertAdjacentHTML(position ,t);
+    }
+    //at specific position..    
+         
+}
+
 
 var sortItem = document.getElementById("sortby");
 sortItem.addEventListener("change",function(){

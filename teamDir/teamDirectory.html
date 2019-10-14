@@ -23,16 +23,18 @@
                        <input type="text" placeholder="Email" id="email" required> 
 
                        <select name="major" id="major" required >
-                        <option value="engineering" selected>engineering</option>
+                        <option value="major" selected disabled>major</option>
+                        <option value="engineering">engineering</option>
                         <option value="cs">cs</option>
                        </select>
 
-                       <select name="role" id="role" required>
-                        <option value="Front-End Developer" selected>Front-End Developer</option>
+                       <select name="role" id="role"  required>
+                        <option value="role" disabled selected>role</option>
+                        <option value="Front-End Developer" >Front-End Developer</option>
                         <option value="Back-End Developer">Back-End Developer</option>
                        </select>
 
-                       <textarea placeholder="Biography" id="bio" required minlength="500" maxlength="1500" size="10"></textarea></textarea>
+                       <textarea placeholder="Biography" id="bio"  pattern=".{500,1500}" required ></textarea>
                     </form>
             
                     <div class="checkboxD">
